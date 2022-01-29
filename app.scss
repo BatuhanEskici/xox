@@ -81,10 +81,6 @@ body {
                     &:last-child {
                         border-right: $border-column;
                     }
-
-                    &.clicked {
-                        pointer-events: none;
-                    }
                 }
             }
         }
@@ -101,5 +97,9 @@ body {
                 text-transform: uppercase;
             }
         }
+    }
+
+    .disabled {
+        pointer-events: none;
     }
 }

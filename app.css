@@ -95,10 +95,6 @@ body .layout .game-table .row .column:last-child {
   border-right: 2px solid black;
 }
 
-body .layout .game-table .row .column.clicked {
-  pointer-events: none;
-}
-
 body .layout .game-actions {
   margin-top: 30px;
 }
@@ -110,5 +106,9 @@ body .layout .game-actions button {
   border: 3px solid orange;
   letter-spacing: .05rem;
   text-transform: uppercase;
+}
+
+body .disabled {
+  pointer-events: none;
 }
 /*# sourceMappingURL=app.css.map */
