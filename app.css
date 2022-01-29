@@ -94,4 +94,17 @@ body .layout .game-table .row .column {
 body .layout .game-table .row .column:last-child {
   border-right: 2px solid black;
 }
+
+body .layout .game-actions {
+  margin-top: 30px;
+}
+
+body .layout .game-actions button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 3px solid orange;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=app.css.map */

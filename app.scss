@@ -84,5 +84,18 @@ body {
                 }
             }
         }
+
+        .game-actions {
+            margin-top: 30px;
+
+            button {
+                padding: 10px 15px;
+                border-radius: 5px;
+                background-color: #ffffff;
+                border: $border-row;
+                letter-spacing: .05rem;
+                text-transform: uppercase;
+            }
+        }
     }
 }
