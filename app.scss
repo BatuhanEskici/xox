@@ -1,5 +1,6 @@
 $background-color: #373737;
-$border: 3px solid orange;
+$border-row: 3px solid orange;
+$border-column: 2px solid black;
 
 * {
     box-sizing: border-box;
@@ -23,19 +24,41 @@ body {
             border-radius: 5px;
 
             .row {
-                border: $border;
+                display: flex;
+                border: $border-row;
+                border-top: none;
                 border-bottom: none;
                 height: 33.33%;
 
                 &:first-child {
+                    border-top: $border-row; 
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
+
+                    .column {
+                        border-top: $border-column;
+                    }
                 }
 
                 &:last-child {
-                    border-bottom: $border;
+                    border-bottom: $border-row;
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
+
+                    .column {
+                        border-bottom: $border-column;
+                    }
+                }
+
+                .column {
+                    width: 33.33%;
+                    border: $border-column;
+                    border-bottom: none;
+                    border-right: none;
+
+                    &:last-child {
+                        border-right: $border-column;
+                    }
                 }
             }
         }

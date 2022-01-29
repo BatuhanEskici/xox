@@ -25,19 +25,43 @@ body .layout .game-table {
 }
 
 body .layout .game-table .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: 3px solid orange;
+  border-top: none;
   border-bottom: none;
   height: 33.33%;
 }
 
 body .layout .game-table .row:first-child {
+  border-top: 3px solid orange;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+body .layout .game-table .row:first-child .column {
+  border-top: 2px solid black;
 }
 
 body .layout .game-table .row:last-child {
   border-bottom: 3px solid orange;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+body .layout .game-table .row:last-child .column {
+  border-bottom: 2px solid black;
+}
+
+body .layout .game-table .row .column {
+  width: 33.33%;
+  border: 2px solid black;
+  border-bottom: none;
+  border-right: none;
+}
+
+body .layout .game-table .row .column:last-child {
+  border-right: 2px solid black;
 }
 /*# sourceMappingURL=app.css.map */
