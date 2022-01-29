@@ -12,6 +12,9 @@ class Game {
         this.result = null;
     }
 
+    /**
+     * Start the game
+     */
     start() {
         this.current_player = "X";
         this.current_player_text.innerText = `Current player: ${this.current_player}`;
@@ -21,6 +24,10 @@ class Game {
         });
     }
 
+    /**
+     * Handle clicks of columns
+     * @param {object} event Event object for perform actions of clicked column
+     */
     handleColumnClick = (event) => {
         const clicked_column = event.target;
 
