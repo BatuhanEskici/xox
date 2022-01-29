@@ -1,3 +1,6 @@
+/**
+ * Methods about the game
+ */
 class Game {
     constructor() {
         this.rows = document.querySelectorAll(".game-table .row");
