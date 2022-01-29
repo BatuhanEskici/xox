@@ -10,6 +10,7 @@ class Game {
         this.current_player_text = document.querySelector("#current_player");
         this.current_player = null;
         this.result = null;
+        this.game_state = [[0,0,0], [0,0,0], [0,0,0]];
     }
 
     /**
@@ -30,8 +31,13 @@ class Game {
      */
     handleColumnClick = (event) => {
         const clicked_column = event.target;
+        const clicked_row = clicked_column.parentElement;
+        const clicked_column_index = clicked_column.getAttribute("id");
+        const clicked_row_index = clicked_row.getAttribute("id");
 
         clicked_column.innerText = this.current_player;
+
+        console.log(clicked_row_index, clicked_column_index);
 
         this.moveGameToNextMove();
     }
