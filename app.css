@@ -23,4 +23,21 @@ body .layout .game-table {
   height: 350px;
   border-radius: 5px;
 }
+
+body .layout .game-table .row {
+  border: 3px solid orange;
+  border-bottom: none;
+  height: 33.33%;
+}
+
+body .layout .game-table .row:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+body .layout .game-table .row:last-child {
+  border-bottom: 3px solid orange;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 /*# sourceMappingURL=app.css.map */

@@ -20,6 +20,23 @@ body {
             width: 350px;
             height: 350px;
             border-radius: 5px;
+
+            .row {
+                border: 3px solid orange;
+                border-bottom: none;
+                height: 33.33%;
+
+                &:first-child {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+
+                &:last-child {
+                    border-bottom: 3px solid orange;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
         }
     }
 }
