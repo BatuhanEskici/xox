@@ -88,6 +88,7 @@ body .layout .game-table .row .column {
   place-items: center;
   font-size: 2.50rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 body .layout .game-table .row .column:last-child {

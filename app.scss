@@ -76,6 +76,7 @@ body {
                     place-items: center;
                     font-size: 2.50rem;
                     font-weight: bold;
+                    cursor: pointer;
 
                     &:last-child {
                         border-right: $border-column;
