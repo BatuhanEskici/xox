@@ -1,4 +1,5 @@
 $background-color: #373737;
+$border: 3px solid orange;
 
 * {
     box-sizing: border-box;
@@ -22,7 +23,7 @@ body {
             border-radius: 5px;
 
             .row {
-                border: 3px solid orange;
+                border: $border;
                 border-bottom: none;
                 height: 33.33%;
 
@@ -32,7 +33,7 @@ body {
                 }
 
                 &:last-child {
-                    border-bottom: 3px solid orange;
+                    border-bottom: $border;
                     border-bottom-left-radius: 5px;
                     border-bottom-right-radius: 5px;
                 }
