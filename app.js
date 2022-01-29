@@ -42,6 +42,8 @@ class Game {
         const clicked_column_index = clicked_column.getAttribute("id");
         const clicked_row_index = clicked_row.getAttribute("id");
 
+        clicked_column.classList.add("clicked");
+
         clicked_column.innerText = this.current_player;
 
         this.updateGameState(clicked_row_index, clicked_column_index);
@@ -122,6 +124,7 @@ class Game {
 
         this.columns.forEach((column) => {
             column.innerText = "";
+            column.classList.remove("clicked");
         });
 
         this.current_player_text.innerText = "Current player: -";

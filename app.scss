@@ -81,6 +81,10 @@ body {
                     &:last-child {
                         border-right: $border-column;
                     }
+
+                    &.clicked {
+                        pointer-events: none;
+                    }
                 }
             }
         }
