@@ -8,9 +8,9 @@ class Game {
         this.rows = document.querySelectorAll(".game-table .row");
         this.columns = document.querySelectorAll(".game-table .column");
         this.current_player_text = document.querySelector("#current_player");
+        this.result_text = document.querySelector("#result");
         this.previous_player = null;
         this.current_player = null;
-        this.result = null;
         this.game_state = [[1,2,3], [4,5,6], [7,8,9]];
     }
 
@@ -59,6 +59,9 @@ class Game {
         this.game_state[row_index][column_index] = this.current_player;
     }
 
+    /**
+     * Check game is over
+     */
     checkIsGameOver() {
         const game_state = this.game_state;
 
@@ -88,13 +91,32 @@ class Game {
             const game_state_item_3 = game_state[pattern_row_2][pattern_column_2];
 
             if (game_state_item_1 === game_state_item_2 && game_state_item_1  === game_state_item_3) {
-                console.log("Game is over");
-                console.log("The winner is:", this.previous_player);
+                this.showTheResult(this.previous_player);
                 break;
-            } else {
-                console.log("Game isn't over yet");
             }
         }
+    }
+
+    /**
+     * Display winner player on the screen
+     * @param {string} winner Player type for display who is the winner 
+     */
+    showTheResult(winner) {
+        this.result_text.innerText = `Result: Player ${winner} won`;
+        this.current_player_text.innerText = "Current player: -";
+    }
+
+    /**
+     * Reset the game
+     */
+    resetTheGame() {
+        this.previous_player = null;
+        this.current_player = null;
+        this.game_state = [[1,2,3], [4,5,6], [7,8,9]];
+
+        this.columns.forEach((column) => {
+            column.innerText = "";
+        })
     }
 
     /**
