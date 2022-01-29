@@ -12,6 +12,7 @@ class Game {
         this.previous_player = null;
         this.current_player = null;
         this.game_state = [[1,2,3], [4,5,6], [7,8,9]];
+        this.play_again_button = document.querySelector("#play_again");
     }
 
     /**
@@ -24,6 +25,11 @@ class Game {
         this.columns.forEach((column) => {
             column.addEventListener("click", this.handleColumnClick);
         });
+
+        this.play_again_button.addEventListener("click", () => {
+            this.resetTheGame();
+            this.start();
+        })
     }
 
     /**
@@ -116,7 +122,10 @@ class Game {
 
         this.columns.forEach((column) => {
             column.innerText = "";
-        })
+        });
+
+        this.current_player_text.innerText = "Current player: -";
+        this.result_text.innerText = "Result: -";
     }
 
     /**
