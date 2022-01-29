@@ -25,6 +25,15 @@ body {
         justify-content: center;
         align-items: center;
 
+        .game-status {
+            color: white;
+            margin-bottom: 30px;
+
+            #result {
+                margin-top: 15px;
+            }
+        }
+
         .game-table {
             background-color: #ffffff;
             width: 350px;

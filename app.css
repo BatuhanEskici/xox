@@ -32,6 +32,15 @@ body .layout {
           align-items: center;
 }
 
+body .layout .game-status {
+  color: white;
+  margin-bottom: 30px;
+}
+
+body .layout .game-status #result {
+  margin-top: 15px;
+}
+
 body .layout .game-table {
   background-color: #ffffff;
   width: 350px;
