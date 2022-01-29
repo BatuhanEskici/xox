@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 $background-color: #373737;
 $border-row: 3px solid orange;
 $border-column: 2px solid black;
@@ -6,6 +8,10 @@ $border-column: 2px solid black;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -55,6 +61,10 @@ body {
                     border: $border-column;
                     border-bottom: none;
                     border-right: none;
+                    display: grid;
+                    place-items: center;
+                    font-size: 2.50rem;
+                    font-weight: bold;
 
                     &:last-child {
                         border-right: $border-column;
