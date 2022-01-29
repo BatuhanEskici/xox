@@ -17,7 +17,7 @@ class Game {
      */
     start() {
         this.current_player = "X";
-        this.current_player_text.innerText = `Current player: ${this.current_player}`;
+        this.updateCurrentPlayer("X");
 
         this.columns.forEach((column) => {
             column.addEventListener("click", this.handleColumnClick);
@@ -35,7 +35,11 @@ class Game {
 
         this.current_player = this.current_player === "X" ? "O" : "X";
 
-        this.current_player_text.innerText = `Current player: ${this.current_player}`;
+        this.updateCurrentPlayer(this.current_player);
+    }
+
+    updateCurrentPlayer(current_player) {
+        this.current_player_text.innerText = `Current player: ${current_player}`;
     }
 }
 
