@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #373737;
 }
@@ -8,5 +15,12 @@ body .layout {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+body .layout .game-table {
+  background-color: #ffffff;
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=app.css.map */
