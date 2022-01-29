@@ -20,8 +20,10 @@ body {
     .layout {
         width: 100vw;
         height: 100vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .game-table {
             background-color: #ffffff;
