@@ -49,7 +49,7 @@ class Game {
     moveGameToNextMove() {
         this.current_player = this.current_player === "X" ? "O" : "X";
 
-        this.updateCurrentPlayerText(this.current_player);
+        this.updateCurrentPlayerText();
     }
 }
 
