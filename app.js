@@ -37,7 +37,7 @@ class Game {
 
         clicked_column.innerText = this.current_player;
 
-        console.log(clicked_row_index, clicked_column_index);
+        this.updateGameState(clicked_row_index, clicked_column_index);
 
         this.moveGameToNextMove();
     }
@@ -47,6 +47,15 @@ class Game {
      */
     updateCurrentPlayerText() {
         this.current_player_text.innerText = `Current player: ${this.current_player}`;
+    }
+
+    /**
+     * Update game state by the clicked row and column index
+     * @param {number} row_index Index of clicked row
+     * @param {number} column_index Index of clicked column
+     */
+    updateGameState(row_index, column_index) {
+        this.game_state[row_index][column_index] = this.current_player;
     }
 
     /**
