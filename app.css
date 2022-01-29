@@ -68,6 +68,14 @@ body .layout .game-table .row:first-child .column {
   border-top: 2px solid black;
 }
 
+body .layout .game-table .row:first-child .column:first-child {
+  border-top-left-radius: 2.5px;
+}
+
+body .layout .game-table .row:first-child .column:nth-child(3) {
+  border-top-right-radius: 2.5px;
+}
+
 body .layout .game-table .row:last-child {
   border-bottom: 3px solid orange;
   border-bottom-left-radius: 5px;
@@ -76,6 +84,14 @@ body .layout .game-table .row:last-child {
 
 body .layout .game-table .row:last-child .column {
   border-bottom: 2px solid black;
+}
+
+body .layout .game-table .row:last-child .column:first-child {
+  border-bottom-left-radius: 2.5px;
+}
+
+body .layout .game-table .row:last-child .column:last-child {
+  border-bottom-right-radius: 2.5px;
 }
 
 body .layout .game-table .row .column {

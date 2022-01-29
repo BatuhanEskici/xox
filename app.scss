@@ -54,6 +54,14 @@ body {
 
                     .column {
                         border-top: $border-column;
+
+                        &:first-child {
+                            border-top-left-radius: 2.5px;
+                        }
+
+                        &:nth-child(3) {
+                            border-top-right-radius: 2.5px;
+                        }
                     }
                 }
 
@@ -64,6 +72,14 @@ body {
 
                     .column {
                         border-bottom: $border-column;
+
+                        &:first-child {
+                            border-bottom-left-radius: 2.5px;
+                        }
+
+                        &:last-child {
+                            border-bottom-right-radius: 2.5px;
+                        }
                     }
                 }
 
