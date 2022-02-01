@@ -39,20 +39,20 @@ class Game {
 
     /**
      * Handle clicks of columns
-     * @param {object} event Event object for perform actions of disabled column
+     * @param {object} event Event object for perform actions of clicked column
      */
     handleColumnClick = (event) => {
         this.counter ++;
-        const disabled_column = event.target;
-        const disabled_row = disabled_column.parentElement;
-        const disabled_column_index = disabled_column.getAttribute("id");
-        const disabled_row_index = disabled_row.getAttribute("id");
+        const clicked_column = event.target;
+        const clicked_row = clicked_column.parentElement;
+        const clicked_column_index = clicked_column.getAttribute("id");
+        const clicked_row_index = clicked_row.getAttribute("id");
 
-        disabled_column.classList.add("disabled");
+        clicked_column.classList.add("disabled");
 
-        disabled_column.innerText = this.current_player;
+        clicked_column.innerText = this.current_player;
 
-        this.updateGameState(disabled_row_index, disabled_column_index);
+        this.updateGameState(clicked_row_index, clicked_column_index);
 
         this.moveGameToNextMove();
     }
